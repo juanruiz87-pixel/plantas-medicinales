@@ -1,0 +1,1325 @@
+/* =========================================
+   FLORA DE MONTE FLOR
+   DISEÑO BOTÁNICO MODERNO
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* ==============================
+   ENCABEZADO UNACH
+============================== */
+
+.encabezado-universidad {
+    width: 100%;
+    min-height: 160px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #eef5e9
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 5%;
+
+    border-bottom: 4px solid #c99a3e;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.10);
+
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo-universidad {
+    width: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-universidad img {
+    width: 150px;
+    height: auto;
+
+    object-fit: contain;
+
+    transition: .3s;
+}
+
+.logo-universidad img:hover {
+    transform: scale(1.05);
+}
+
+
+/* INFORMACIÓN CENTRAL */
+
+.informacion-proyecto {
+    flex: 1;
+
+    text-align: center;
+
+    padding: 10px 30px;
+
+    border-left: 1px solid #d5dfd0;
+    border-right: 1px solid #d5dfd0;
+}
+
+.informacion-proyecto h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    color: #16452f;
+
+    margin-bottom: 8px;
+}
+
+.informacion-proyecto p {
+    margin: 4px;
+
+    color: #526158;
+
+    font-size: 15px;
+}
+
+
+/* INTEGRANTES */
+
+.integrantes {
+    width: 240px;
+}
+
+.integrantes h3 {
+    color: #26734d;
+
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.integrantes p {
+    color: #46534a;
+
+    font-size: 14px;
+
+    margin: 4px 0;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 750px) {
+
+    .encabezado-universidad {
+        flex-direction: column;
+        text-align: center;
+
+        padding: 25px 15px;
+    }
+
+    .informacion-proyecto {
+        border-left: none;
+        border-right: none;
+
+        border-top: 1px solid #d5dfd0;
+        border-bottom: 1px solid #d5dfd0;
+
+        padding: 15px;
+    }
+
+    .integrantes {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ---------- VARIABLES ---------- */
+
+:root {
+    --verde-oscuro: #12372a;
+    --verde: #1f6f50;
+    --verde-claro: #6fae72;
+    --menta: #dff3df;
+    --crema: #f8f5e9;
+    --blanco: #ffffff;
+    --texto: #26352d;
+    --dorado: #d4a94d;
+    --sombra: 0 15px 40px rgba(18, 55, 42, 0.13);
+}
+
+
+/* ---------- CONFIGURACIÓN ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--crema);
+    color: var(--texto);
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+header {
+    height: 75px;
+
+    background: rgba(18, 55, 42, 0.94);
+
+    backdrop-filter: blur(15px);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,.12);
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    position: relative;
+
+    transition: .3s;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #a9d9a7;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #a9d9a7;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.hero {
+
+    min-height: 680px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8,45,31,.85),
+            rgba(37,105,70,.55)
+        ),
+        url("imagenes/ruda.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* círculo decorativo */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    animation: girar 20s linear infinite;
+}
+
+@keyframes girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.hero-text {
+
+    max-width: 850px;
+
+    padding: 30px;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: aparecer 1.2s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 8vw, 90px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 5px 20px rgba(0,0,0,.3);
+}
+
+
+.hero p {
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    max-width: 700px;
+
+    margin: auto auto 35px;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.boton {
+
+    display: inline-block;
+
+    background: linear-gradient(
+        135deg,
+        #78b878,
+        #43895c
+    );
+
+    color: white;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.2);
+
+    transition: .3s;
+}
+.boton-info {
+    display: inline-block;
+    background-color: #174f45;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.boton-info:hover {
+    background-color: #236b5d;
+}
+.boton:hover {
+
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.3);
+}
+
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+.buscador {
+
+    padding: 90px 20px 40px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8f5e9,
+            #eef6ed
+        );
+}
+
+.buscador h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+
+    color: var(--verde-oscuro);
+
+    margin-bottom: 25px;
+}
+
+
+#busqueda {
+
+    width: 90%;
+
+    max-width: 650px;
+
+    padding: 18px 25px;
+
+    border-radius: 50px;
+
+    border: 2px solid #d7e4d5;
+
+    background: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.07);
+
+    transition: .3s;
+}
+
+#busqueda:focus {
+
+    border-color: var(--verde-claro);
+
+    box-shadow:
+        0 10px 35px rgba(60,120,70,.15);
+
+    transform: scale(1.01);
+}
+
+
+/* =========================================
+   SECCIÓN PLANTAS
+========================================= */
+
+.plantas {
+
+    padding: 70px 7% 100px;
+
+    background: #eef6ed;
+}
+
+.plantas h2 {
+
+    text-align: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    color: var(--verde-oscuro);
+
+    margin-bottom: 55px;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(270px, 1fr));
+
+    gap: 30px;
+
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tarjeta {
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+    position: relative;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+    border: 1px solid rgba(31,111,80,.08);
+}
+
+.tarjeta:hover {
+
+    transform:
+        translateY(-12px)
+        rotate(.3deg);
+
+    box-shadow:
+        0 25px 50px rgba(18,55,42,.2);
+}
+
+
+/* imagen */
+
+.tarjeta img {
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+      
+    display: block;
+    
+    transition: .5s;
+}
+
+.tarjeta:hover img {
+
+    transform: scale(1.04);
+}
+
+
+/* contenido */
+
+.contenido {
+
+    padding: 25px;
+}
+
+.contenido h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    color: var(--verde-oscuro);
+
+    margin-bottom: 5px;
+}
+
+.cientifico {
+
+    color: var(--verde);
+
+    font-style: italic;
+
+    margin-bottom: 18px;
+}
+
+.contenido p {
+
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+}
+
+
+/* botón tarjeta */
+
+.contenido button {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--verde-oscuro);
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.contenido button:hover {
+
+    background: var(--verde);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 2000;
+
+    inset: 0;
+
+    background:
+        rgba(10,35,25,.75);
+
+    backdrop-filter: blur(8px);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal-contenido {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f0f7ed
+        );
+
+    width: 90%;
+
+    max-width: 650px;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    position: relative;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.3);
+
+    animation:
+        modalEntrada .4s ease;
+}
+
+@keyframes modalEntrada {
+
+    from {
+        opacity: 0;
+        transform: scale(.85) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+.modal-contenido h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+
+    color: var(--verde-oscuro);
+
+    margin-bottom: 20px;
+}
+
+#texto-modal {
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+.cerrar {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--menta);
+
+    color: var(--verde-oscuro);
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.cerrar:hover {
+
+    background: var(--verde);
+
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   SOBRE EL PROYECTO
+========================================= */
+
+.nosotros {
+
+    padding: 100px 10%;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #d8ecd5,
+            transparent 40%
+        ),
+
+        #dfeede;
+}
+
+.nosotros h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    color: var(--verde-oscuro);
+
+    margin-bottom: 25px;
+}
+
+.nosotros p {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #0d291e;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+footer p {
+
+    margin: 8px;
+
+    opacity: .8;
+}
+
+
+/* =========================================
+   EFECTO DE APARICIÓN
+========================================= */
+
+.tarjeta {
+
+    animation: subir .8s ease both;
+}
+
+@keyframes subir {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 700px) {
+
+    header {
+
+        height: auto;
+
+        padding: 18px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+
+        min-height: 580px;
+    }
+
+    .hero h1 {
+
+        font-size: 50px;
+    }
+
+    .hero p {
+
+        font-size: 17px;
+    }
+
+    .plantas h2,
+    .buscador h2,
+    .nosotros h2 {
+
+        font-size: 35px;
+    }
+
+    .modal-contenido {
+
+        padding: 35px 25px;
+    }
+}
+/* Galería de imágenes */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    max-width: 700px;
+    margin: 20px 0;
+}
+
+.galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+/* Fondo oscuro para ampliar la imagen */
+.visor {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.visor img {
+    max-width: 95%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.visor p {
+    color: white;
+    text-align: center;
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+/* Mapa pequeño en la portada */
+.imagen-mapa {
+    width: 300px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid white;
+    cursor: zoom-in;
+    transition: transform 0.3s;
+}
+.imagen-mapa:hover {
+    transform: scale(1.03);
+}
+.texto-mapa {
+    color: white;
+    font-size: 13px;
+}
+/* Mostrar el mapa completo al hacer clic */
+.ventana-mapa {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+.ventana-mapa img {
+    display: block;
+    width: 85vw;
+    height: 75vh;
+    max-width: 85vw;
+    max-height: 75vh;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+.cerrar-mapa { 
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    z-index: 10000;
+}
+.imagen-principal-nim {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-papaya {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-verbena {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-Chico zapote {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-hierbamora {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-Agave {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-guanabana {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-limon {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-Mamey {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-marañon {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-canela {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-epazote {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-guayaba {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-capulin {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-bugambilia {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-almendro {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-cacao {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-mango {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-tamarindo {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-piñon {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-pandepalo  {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-nance {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-chipilincillo {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-maguey morado {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-espada del rey {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}
+.imagen-principal-hierba mora {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    cursor: zoom-in;
+    margin: 10px 0 20px;
+}

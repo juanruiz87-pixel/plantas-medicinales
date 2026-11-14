@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maguey morado  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Maguey morado</h2>
+
+        <img src="Plantas/Maguey morado.jpg"
+     alt="Planta de maguey morado"
+     class="imagen-principal-nim"
+     onclick="ampliarImagen(this)">
+    </h2>Galería del Maguey morado</h2>
+</div>
+<h3>📸 Galería del Maguey morado</h3>
+
+<div class="galeria">
+    <img src="Maguey morado/planta.jpg"
+         alt="Planta de Maguey"
+         onclick="ampliarImagen(this)">
+
+    <img src="Maguey morado/hoja enfrente.jpg"
+         alt="Hojas de Maguey"
+         onclick="ampliarImagen(this)">
+
+    <img src="Maguey morado/flor.jpg"
+         alt="Flores de Maguey"
+         onclick="ampliarImagen(this)">
+
+    <img src="Maguey morado/hoja.jpg"
+         alt="Parte tracera de la hoja de Maguey"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i>Byrsonima crassifolia.</i></p>
+
+        <h3>Familia</h3>
+        <p> Malpighiaceae.</p>
+
+        <h3>Descripción</h3>
+        <p>
+            El maguey morado es una planta ornamental que se caracteriza por 
+            sus hojas alargadas, gruesas y de color morado o verde oscuro en 
+            la parte superior, con tonos violetas en la parte inferior. Crece
+             en forma de roseta y se adapta bien a climas cálidos. Se utiliza 
+             principalmente para decorar jardines y espacios interiores, 
+             además de ser una planta resistente y fácil de cuidar.
+        
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+        El maguey morado se utiliza principalmente como planta ornamental 
+        para decorar jardines, patios y espacios interiores. En algunas
+         comunidades también se emplea en la medicina tradicional, por ejemplo,
+          en remedios caseros para aliviar ciertas molestias. Sin embargo, 
+          estos usos medicinales no están suficientemente comprobados científicamente,
+           por lo que se recomienda evitar su consumo sin orientación profesional.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+      
+
+    </main>
+
+</body>
+</html>

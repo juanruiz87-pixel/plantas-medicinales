@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almendro  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Almendro</h2>
+
+        <img src="Plantas/Almendro.jpg"
+     alt="Planta de Almendro"
+     class="imagen-principal-almendro"
+     onclick="ampliarImagen(this)">
+    </h2>Galería del Almendro</h2>
+</div>
+<h3>📸 Galería del Almendro</h3>
+
+<div class="galeria">
+    <img src="Almendro/Arbol.jpg"
+         alt="Arbol de Almendro"
+         onclick="ampliarImagen(this)">
+
+    <img src="Almendro/hoja.jpg"
+         alt="Hojas de Almendro"
+         onclick="ampliarImagen(this)">
+
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i>Byrsonima crassifolia.</i></p>
+
+        <h3>Familia</h3>
+        <p> Malpighiaceae.</p>
+
+        <h3>Descripción</h3>
+        <p>
+           es un árbol que crece en climas cálidos y puede alcanzar gran altura. 
+           Su tronco es recto y sus ramas crecen en niveles, formando una copa 
+           amplia que proporciona sombra. Sus hojas son simples, grandes, 
+           de forma ovalada y alargada, con bordes lisos y textura ligeramente gruesa
+           . Son de color verde cuando están jóvenes o maduras y pueden cambiar a 
+           tonos rojizos, amarillos o anaranjados antes de caer. Su fruto es ovalado 
+           y contiene una semilla en su interior.
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+        El almendro tropical tiene principalmente usos ornamentales, alimenticios y tradicionales.
+         Su fruto contiene una semilla que puede comerse cuando está correctamente preparada, 
+         aunque no debe confundirse con la almendra comercial (Prunus dulcis). El árbol también 
+         se utiliza para dar sombra en parques, jardines y patios. En algunas comunidades, 
+         sus hojas y corteza se emplean en la medicina tradicional para preparar remedios caseros,
+          pero sus beneficios medicinales no están suficientemente comprobados científicamente.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+
+    </main>
+
+</body>
+</html>

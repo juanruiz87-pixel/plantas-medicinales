@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papaya - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Papaya</h2>
+
+        <img src="Plantas/Verbena.jpeg"
+     alt="Planta de Verbena"
+     class="imagen-principal-verbena"
+     onclick="ampliarImagen(this)">
+<h2>Galería de la Verbena</h2>
+</div>
+<h3>📸 Galería de la Verbena</h3>
+
+<div class="galeria">
+    <img src="verbena/planta.jpg"
+         alt="Planta de verbena"
+         onclick="ampliarImagen(this)">
+
+    <img src="verbena/hoja.jpg"
+         alt="Hojas de verbena"
+         onclick="ampliarImagen(this)">
+
+    <img src="verbena/flor.jpg"
+         alt="Flores de Verbena"
+         onclick="ampliarImagen(this)">
+
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i> Verbena hastata </i></p>
+
+        <h3>Familia</h3>
+        <p>Verbenaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+        La verbena azul es una planta herbácea que puede crecer de forma silvestre
+         y produce pequeñas flores de color azul o morado agrupadas en espigas. 
+         Sus hojas son simples, de color verde, alargadas, con margen dentado o 
+         ligeramente lobulado, ápice puntiagudo y una textura un poco áspera.
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            La verbena azul se utiliza principalmente como planta ornamental y
+             también en la medicina tradicional. Algunas personas la preparan en 
+             infusiones como remedio casero para aliviar molestias digestivas, 
+             fiebre y algunos síntomas de resfriado.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+        
+
+    </main>
+
+</body>
+</html>

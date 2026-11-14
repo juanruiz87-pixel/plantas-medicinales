@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canela  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Canela</h2>
+
+       <img src="Plantas/Canela.jpg"
+     alt="Planta de canela"
+     class="imagen-principal-canela"
+     onclick="ampliarImagen(this)">
+<h3>📸 Galería de canela</h3>
+
+<div class="galeria">
+    <img src="Canela/hoja.jpg"
+         alt="Hojas de Cpulin"
+         onclick="ampliarImagen(this)">
+
+    <img src="Canela/Arbol.jpg"
+         alt="Arbol de Canela
+         onclick="ampliarImagen(this)">
+
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+
+        <h3>Nombre científico</h3>
+        <p><i>Cinnamomum verum.</i></p>
+
+        <h3>Familia</h3>
+        <p>Lauraceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+           El árbol de canela es una planta que puede crecer varios metros de altura y tiene un tronco leñoso
+            con ramas que forman una copa frondosa. Su corteza es de color café y tiene un aroma muy agradable, 
+            ya que de ella se obtiene la canela que usamos en la cocina. Sus hojas son simples, alargadas y de forma ovalada,
+             con las puntas un poco puntiagudas. Son de color verde brillante y tienen varias líneas marcadas que van desde la base hasta la punta. 
+             Cuando las hojas son jóvenes, pueden presentar tonos rojizos o cobrizos.
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            La canela se utiliza principalmente como condimento para dar sabor y aroma a alimentos y bebidas, como el café, el té, 
+            el arroz con leche y los postres. También se usa para preparar infusiones tradicionales, ya que muchas personas la emplean como remedio
+             casero para aliviar algunas molestias digestivas. Además, su aceite se utiliza en la elaboración de perfumes, jabones y productos aromáticos.
+              Su corteza es la parte más aprovechada de la planta, aunque también se pueden utilizar sus hojas para obtener aceites aromáticos.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+    </main>
+
+</body>
+</html>

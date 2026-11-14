@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierba mora  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Mango</h2>
+
+     <img src="Plantas/Yerba mora.jpg"
+     alt="Planta de Hierba mora"
+     class="imagen-principal-hierba mora"
+     onclick="ampliarImagen(this)">
+<h3>📸 Galería de la Hierba mora</h3>
+
+<div class="galeria">
+    <img src="Hierba mora/hoja.jpg"
+         alt="Hojas de Hierba mora"
+         onclick="ampliarImagen(this)">
+
+    <img src="Hierba mora/planta.jpg"
+         alt="Planta de Hierba mora"
+         onclick="ampliarImagen(this)">
+
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+
+        <h3>Nombre científico</h3>
+        <p><i>Solanum nigrum</i></p>
+
+        <h3>Familia</h3>
+        <p> Solanaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+           es una planta herbácea que crece en lugares húmedos, terrenos de cultivo y zonas con vegetación. 
+           Tiene tallos verdes y ramificados que pueden alcanzar una altura moderada. Sus hojas son simples, de forma ovalada, 
+           con bordes ligeramente ondulados y punta alargada; son de color verde y tienen una textura suave. Sus flores son pequeñas, 
+           blancas y con el centro amarillo, mientras que sus frutos son pequeñas bayas redondas que cambian de verde a negro al madurar.
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+      La hierba mora se utiliza en algunas comunidades como planta medicinal tradicional y, en ciertas regiones, como alimento. Sin embargo, 
+      algunas especies del género Solanum contienen sustancias tóxicas, especialmente en frutos verdes y otras partes de la planta. Por eso, 
+      no se recomienda consumirla ni utilizarla como remedio casero sin una identificación correcta de la especie y orientación especializada. 
+      También puede crecer espontáneamente en huertos y terrenos agrícolas.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+       
+
+    </main>
+
+</body>
+</html>

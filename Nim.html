@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nim - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Nim</h2>
+
+        <img src="Plantas/Nim.jpeg"
+     alt="Planta de Nim"
+     class="imagen-principal-nim"
+     onclick="ampliarImagen(this)">
+
+<h3>📸 Galería del Nim</h3>
+
+<div class="galeria">
+    <img src="neem/arbol de nim.jpeg"
+         alt="Arbol de Nim"
+         onclick="ampliarImagen(this)">
+
+    <img src="neem/hojas d nim.jpeg"
+         alt="Hojas de Nim"
+         onclick="ampliarImagen(this)">
+
+    <img src="neem/flor.JPG"
+         alt="Flores de Nim"
+         onclick="ampliarImagen(this)">
+
+    <img src="neem/fruto.webp"
+         alt="Fruta de Nim"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i> Azadirachta indica</i></p>
+
+        <h3>Familia</h3>
+        <p> Meliaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+            El Nim es un árbol de importancia
+            medicinal. Puede crecer en zonas tropicales y produce
+            hojas compuestas y de tipo imparipinnada,tiene un raquis que mide 
+            entre 20 y 40cm de largo , se distribuye en 20 a 31 pequeños foliolos de color verde
+            oscuro.
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            Sus hojas sirven para hacer un baño y tambien lo utilizan como 
+            pesticida natural . ayuda en la cicatrizacion mediante un baño.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+    
+
+    </main>
+
+</body>
+</html>

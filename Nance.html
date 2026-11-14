@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nance  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Nance</h2>
+
+        <img src="Plantas/nance.jpeg"
+     alt="Planta de Nance"
+     class="imagen-principal-nance"
+     onclick="ampliarImagen(this)">
+    </h2>Galería del nance</h2>
+</div>
+<h3>📸 Galería del Nance</h3>
+
+<div class="galeria">
+    <img src="Nance/arbol n.jpeg"
+         alt="Arbol de Nance"
+         onclick="ampliarImagen(this)">
+
+    <img src="Nance/hoja.jpeg"
+         alt="Hojas de Nance"
+         onclick="ampliarImagen(this)">
+
+    <img src="Nance/flor.jpg"
+         alt="Flores de Nance"
+         onclick="ampliarImagen(this)">
+
+    <img src="Nance/frutas.jpg"
+         alt="Fruta de Nance"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i>Byrsonima crassifolia.</i></p>
+
+        <h3>Familia</h3>
+        <p> Malpighiaceae.</p>
+
+        <h3>Descripción</h3>
+        <p>
+            El nance es una pequeña fruta de aroma penetrante y sabor agridulce. 
+            El arbol de nance puede llegar a medir comunmente entre 3 y 15 metros 
+            de altura. sus hojas son simples,alternas,de forma elíptica a obovada,
+            margen entero,ápice obtuso,base redondeada,textura coriácea y nervadura pinnada.
+        
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+        se utiliza principalmente en la gastronomía para preparar bebidas, 
+        postres y dulces tradicionales, 
+        así como en la medicina natural para aliviar problemas digestivos y
+         de la piel.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+
+    </main>
+
+</body>
+</html>

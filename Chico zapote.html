@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chico zapote  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Chico zapote</h2>
+
+       <img src="Plantas/chico zapote.jpg"
+     alt="Planta de chico zapote"
+     class="imagen-principal-chicozapote"
+     onclick="ampliarImagen(this)">
+    </h2>Galería del Chico zapote/h2>
+</div>
+<h3>📸 Galería del Chico zapote</h3>
+
+<div class="galeria">
+    <img src="Chico zapote/arbol.jpg"
+         alt="Arbol de Chico zapote"
+         onclick="ampliarImagen(this)">
+
+    <img src="Chico zapote/hoja.jpg"
+         alt="Hojas de Chico zapote"
+         onclick="ampliarImagen(this)">
+
+    <img src="Chico zapote/fruto.jpg"
+         alt="Fruta de Chico zapote"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i>Byrsonima crassifolia.</i></p>
+
+        <h3>Familia</h3>
+        <p> Malpighiaceae.</p>
+
+        <h3>Descripción</h3>
+        <p>
+           es un árbol frutal de clima tropical que puede alcanzar gran altura y 
+           tiene una copa frondosa con ramas abundantes. Su tronco es fuerte y 
+           contiene un látex blanco y pegajoso. Sus hojas son simples, de forma ovalada o elíptica,
+            con bordes lisos, textura lisa y algo gruesa, y color verde brillante. Crecen principalmente
+             en las puntas de las ramas. Su fruto es redondo u ovalado, de cáscara café y pulpa dulce,
+              suave y de color marrón, que contiene varias semillas negras y brillantes.
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+        
+            se utiliza principalmente para la alimentación, ya que su fruto se consume fresco y también
+             se emplea para preparar licuados, dulces y otros alimentos. Su madera se aprovecha en algunos
+              trabajos de construcción y carpintería. Además, el látex del árbol se utilizó tradicionalmente para elaborar chicle.
+               En la medicina tradicional se han empleado distintas partes del árbol para preparar remedios caseros, aunque sus
+                beneficios medicinales no están suficientemente comprobados científicamente.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+        
+    </main>
+
+</body>
+</html>

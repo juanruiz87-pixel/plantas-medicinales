@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Mango</h2>
+
+        <img src="Plantas/Mango Ataulfo.jpeg"
+     alt="Planta de Mango ataulfo"
+     class="imagen-principal-mango"
+     onclick="ampliarImagen(this)">
+<h3>📸 Galería del Mango</h3>
+
+<div class="galeria">
+    <img src="mango/Hojas.jpeg"
+         alt="Hojas de Mango"
+         onclick="ampliarImagen(this)">
+
+    <img src="mango/Arbol.jpeg"
+         alt="Arbol de ,Mango"
+         onclick="ampliarImagen(this)">
+
+    <img src="mango/flor.jpg"
+         alt="Flores de Mango"
+         onclick="ampliarImagen(this)">
+
+    <img src="mango/fruto.jpg"
+         alt="Fruta de mango"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+
+        <h3>Nombre científico</h3>
+        <p><i>Mangifera indica L..</i></p>
+
+        <h3>Familia</h3>
+        <p> Anacardiaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+            El mango ataulfo  es un árbol frutal de importancia alimentaria
+            y medicinal. Puede crecer en zonas tropicales y produce
+            frutos comestibles de gran importancia en el soconusco mexicano.
+            Tiene hojas simples , alterna , lanceolada , de margen entero , apíce acuminado,
+            base cuneada y nervadura pinnada.
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            El fruto se utiliza principalmente como alimento y se pueden hacer refrescos , 
+            pasteles, y licuados . Sus hojas
+            también son utilizadas tradicionalmente para preparar té y cura dolores intestinales 
+            es antinflamatorio , regula el metabolismo y aporta vitaminas C.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+       
+
+    </main>
+
+</body>
+</html>

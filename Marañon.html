@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marañon - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Marañon</h2>
+
+      <img src="Plantas/Marañon.jpg"
+     alt="Planta de marañón"
+     class="imagen-principal-marañon"
+     onclick="ampliarImagen(this)">
+</div>
+<h3>📸 Galería del Marañon</h3>
+
+<div class="galeria">
+    <img src="Marañon/arbol.jpg"
+         alt="Arbol de Marañon"
+         onclick="ampliarImagen(this)">
+
+    <img src="Marañon/hoja.jpg"
+         alt="Hojas de Marañon"
+         onclick="ampliarImagen(this)">
+
+    <img src="Marañon/hojas.jpg"
+         alt="hoja de Marañon"
+         onclick="ampliarImagen(this)">
+         
+    <img src="Marañon/fruta.jpg"
+         alt="Fruta de Marañon"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i> Azadirachta indica</i></p>
+
+        <h3>Familia</h3>
+        <p> Meliaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+            Es un árbol frutal que crece principalmente en climas tropicales 
+            y cálidos. Puede alcanzar varios metros de altura y tiene 
+            un tronco ramificado. Sus hojas son simples, grandes, de forma ovalada, 
+            con la punta redondeada y los bordes lisos. Son gruesas, de textura lisa
+             y color verde, aunque cuando son jóvenes pueden presentar tonos rojizos. Su fruto es conocido por la nuez de marañón y por la parte carnosa de color amarillo o rojo que la sostiene.
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            El marañón se utiliza principalmente para la alimentación. 
+            Su nuez se consume tostada y se emplea en la preparación de 
+            diversos alimentos, mientras que su parte carnosa se utiliza para 
+            elaborar jugos, dulces, mermeladas y bebidas. 
+            El árbol también se planta para proporcionar sombra y sus frutos 
+            tienen importancia económica para las comunidades que lo cultivan. 
+            Es importante recordar que la cáscara de la nuez contiene sustancias irritantes, 
+            por lo que no debe manipularse ni consumirse sin el procesamiento adecuado.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Mazatán, Chiapas.
+        </p>
+
+
+    </main>
+
+</body>
+</html>

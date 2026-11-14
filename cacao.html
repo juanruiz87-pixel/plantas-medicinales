@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cacao  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>cacao</h2>
+
+       <img src="Plantas/cacao.jpg"
+     alt="Planta de cacao"
+     class="imagen-principal-cacao"
+     onclick="ampliarImagen(this)">
+<h3>📸 Galería del cacao</h3>
+
+<div class="galeria">
+    <img src="cacao/hoja.jpg"
+         alt="Hojas de Cacao"
+         onclick="ampliarImagen(this)">
+
+    <img src="cacao/arbol.jpg"
+         alt="Arbol de cacao
+         onclick="ampliarImagen(this)">
+
+    <img src="cacao/hoja.jpg"
+         alt="Hoja de cacao"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+
+        <h3>Nombre científico</h3>
+        <p><i>Prunus serotina.</i></p>
+
+        <h3>Familia</h3>
+        <p>Rosaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+           es un árbol tropical que crece en lugares cálidos y húmedos, generalmente bajo la sombra de otros árboles.
+            Tiene un tronco delgado y ramas que forman una copa con hojas abundantes. Sus hojas son simples, grandes, 
+            alargadas y de forma ovalada, con bordes lisos, punta fina y color verde brillante cuando maduran; las hojas
+             jóvenes suelen presentar tonos rojizos. Sus flores son pequeñas y crecen directamente en el tronco y las ramas principales.
+              Sus frutos son grandes, de forma ovalada, con una cáscara gruesa y colores que pueden variar entre verde, amarillo, rojo y anaranjado.
+               En su interior contienen semillas cubiertas de una pulpa blanca.
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            Se utiliza principalmente su fruta para comer asi cruda o ya se hace el famoso chocolate
+            que proviene de la semilla seca de la fruta.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+    </main>
+
+</body>
+</html>

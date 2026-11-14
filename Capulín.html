@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capulín  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Capulín</h2>
+
+    <img src="Plantas/Capulin blanco.jpg"
+     alt="Planta de Capulin"
+     class="imagen-principal-capulin"
+     onclick="ampliarImagen(this)">
+<h3>📸 Galería del Capulín</h3>
+
+<div class="galeria">
+    <img src="Capulín blanco/hoja.jpg"
+         alt="Hojas de Cpulin"
+         onclick="ampliarImagen(this)">
+
+    <img src="Capulín blanco/arbol.jpg"
+         alt="Arbol de Capulín"
+         onclick="ampliarImagen(this)">
+
+    <img src="Capulín blanco/flor.jpg"
+         alt="Flores de Capulín"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+
+        <h3>Nombre científico</h3>
+        <p><i>Muntingia calabura</i></p>
+
+        <h3>Familia</h3>
+        <p>Muntingiaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+           es un árbol frutal que puede crecer a varios metros de altura y desarrollar una copa
+            frondosa con numerosas ramas. Su tronco es leñoso y su corteza es de color café
+             oscuro. Sus hojas son simples, alargadas y ovaladas, con la punta fina, bordes dentados y color verde brillante.
+              Sus flores son pequeñas, blancas y crecen agrupadas en racimos. 
+              Su fruto es redondo, pequeño y de color rojo oscuro o negro cuando madura, 
+              con pulpa dulce y una semilla dura en el centro
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            se utiliza principalmente como planta comestible, ya que sus frutos maduros 
+            se consumen frescos y se emplean para preparar mermeladas, atoles, dulces y bebidas.
+            En la medicina tradicional se ha utilizado para preparar remedios caseros, aunque sus 
+            beneficios no están suficientemente comprobados. Es importante evitar el consumo de semillas,
+             hojas y otras partes sin orientación especializada, ya que pueden contener compuestos tóxicos.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamey  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Mamey</h2>
+
+        <img src="Plantas/mamey.jpg"
+     alt="Planta de Mamey"
+     class="imagen-principal-Mamey"
+     onclick="ampliarImagen(this)">
+<h3>📸 Galería del mamey</h3>
+
+<div class="galeria">
+    <img src="Mamey/hoja.jpg"
+         alt="Hojas de Mamey"
+         onclick="ampliarImagen(this)">
+
+    <img src="Mamey/arbol.jpg"
+         alt="Arbol de Mamey"
+         onclick="ampliarImagen(this)">
+
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+
+        <h3>Nombre científico</h3>
+        <p><i>Pouteria sapota.</i></p>
+
+        <h3>Familia</h3>
+        <p> Sapotaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+           es un árbol frutal de clima tropical que puede alcanzar gran altura y 
+           desarrollar una copa amplia y frondosa. Su tronco es grueso y resistente,
+            con ramas que sostienen hojas grandes, simples y alargadas, de forma ovalada,
+             bordes lisos y color verde brillante. Sus hojas crecen principalmente en las 
+             puntas de las ramas. Su fruto es grande, de forma ovalada, con cáscara café y 
+             áspera, pulpa suave de color anaranjado o rojizo y una semilla grande de color
+              oscuro.
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            El mamey se utiliza principalmente para la alimentación, ya que su pulpa dulce se consume
+             fresca y se emplea para preparar licuados, helados, aguas frescas y postres.
+              El árbol también se planta para proporcionar sombra y sus frutos tienen valor comercial.
+               En la medicina tradicional se han utilizado algunas partes del árbol, pero sus beneficios
+                medicinales no están suficientemente comprobados. La semilla y otras partes no deben consumirse sin conocer su seguridad.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+       
+
+    </main>
+
+</body>
+</html>

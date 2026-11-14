@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epazote  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Epazote</h2>
+
+        <img src="Plantas/Epazote.jpg"
+     alt="Planta de Epazote"
+     class="imagen-principal-epazote"
+     onclick="ampliarImagen(this)">
+    </h2>Galería del Epazote</h2>
+</div>
+<h3>📸 Galería del Epazote</h3>
+
+<div class="galeria">
+    <img src="Epazote/Planta.jpg"
+         alt="Planta de Epazote"
+         onclick="ampliarImagen(this)">
+
+    <img src="Epazote/hoja.jpg"
+         alt="Hojas de Epazote"
+         onclick="ampliarImagen(this)">
+
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i>Byrsonima crassifolia.</i></p>
+
+        <h3>Familia</h3>
+        <p> Malpighiaceae.</p>
+
+        <h3>Descripción</h3>
+        <p>
+            es una planta herbácea aromática que crece en climas cálidos y templados.
+             Tiene tallos verdes y ramificados, y sus hojas son simples, de forma ovalada o alargada, 
+             con bordes irregulares o dentados. Su color es verde, su textura es suave y desprenden un olor fuerte 
+             y característico al frotarlas. Sus flores son pequeñas y de color verdoso.
+        
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+        El epazote se utiliza principalmente como planta comestible y medicinal tradicional. 
+        En la cocina mexicana se agrega a frijoles, caldos, quesadillas y otros platillos para darles sabor.
+         Tradicionalmente también se ha utilizado para aliviar molestias digestivas, como gases. Sin embargo, 
+         su aceite concentrado puede ser tóxico y provocar efectos graves, por lo que no debe ingerirse ni utilizarse 
+         como remedio medicinal sin orientación profesional.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Mazatán, Chiapas.
+        </p>
+
+    
+
+    </main>
+
+</body>
+</html>

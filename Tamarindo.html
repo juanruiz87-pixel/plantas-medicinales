@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamarindo  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Tamarindo</h2>
+       <img src="Plantas/Tamarindo.jpg"
+     alt="Planta de tamarindo"
+     class="imagen-principal-tamarindo"
+     onclick="ampliarImagen(this)">
+    </h2>Galería del Tamarindo</h2>
+</div>
+<h3>📸 Galería del Tamarindo</h3>
+
+<div class="galeria">
+    <img src="Tamarindo/Arbol.jpg"
+         alt="Arbol de Tamarindo"
+         onclick="ampliarImagen(this)">
+
+    <img src="Tamarindo/hoja.jpg"
+         alt="Hojas de Tamarindo"
+         onclick="ampliarImagen(this)">
+
+    <img src="Tamarindo/fruto.jpg"
+         alt="Fruta de Tamarindo"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i>Byrsonima crassifolia.</i></p>
+
+        <h3>Familia</h3>
+        <p> Malpighiaceae.</p>
+
+        <h3>Descripción</h3>
+        <p>
+           es un árbol frutal de clima tropical que puede alcanzar gran altura y desarrollar
+            una copa amplia que proporciona bastante sombra. Sus hojas son compuestas, 
+            formadas por varios folíolos pequeños, alargados y ovalados, de color verde, 
+            con bordes lisos y una textura suave. Su fruto crece en vainas de color café que 
+            contienen una pulpa de sabor agridulce y varias semillas duras
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+        El tamarindo se utiliza principalmente para preparar aguas frescas, dulces, 
+        salsas, jugos y otros alimentos. Su pulpa es apreciada por su sabor agridulce 
+        y también se emplea en la elaboración de productos comerciales. 
+        Además, el árbol se utiliza como fuente de sombra y su madera 
+        puede aprovecharse en algunos trabajos. En la medicina tradicional, 
+        la pulpa se usa como remedio casero para favorecer la digestión, 
+        aunque sus efectos medicinales dependen de la preparación y la cantidad consumida.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+       
+    </main>
+
+</body>
+</html>

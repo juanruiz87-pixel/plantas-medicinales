@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chipilincillo  - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Chipilincillo</h2>
+
+        <img src="Plantas/Chipilincillo.jpg"
+     alt="Planta de Chipilincillo"
+     class="imagen-principal-chipilincillo"
+     onclick="ampliarImagen(this)">
+             <h2>Galería del Chipilincillo</h2>
+</div>
+<h3>📸 Galería de piñón</h3>
+
+<div class="galeria">
+    <img src="Chipilincillo/planta.jpg"
+         alt="planta de Chipilincillo"
+         onclick="ampliarImagen(this)">
+
+    <img src="Chipilincillo/hojas.jpg"
+         alt="Hojas de Chipilincillo"
+         onclick="ampliarImagen(this)">
+
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+
+        <h3>Nombre científico</h3>
+        <p><i> Chipilincillo</i></p>
+
+        <h3>Familia</h3>
+        <p> Phyllanthaceae.</p>
+
+        <h3>Descripción</h3>
+        <p>
+        La planta presenta un tallo delgado y erecto, con numerosas ramificaciones laterales.
+         Sus hojas son simples, pequeñas, de forma ovalada a elíptica, con margen entero y color verde. 
+         Se encuentran distribuidas de manera alterna y muy juntas sobre las ramificaciones, 
+         dando una apariencia similar a una hoja compuesta.
+        
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+        Tradicionalmente se utiliza como planta medicinal. Sus hojas y tallos se emplean en 
+        infusiones para tratar algunas molestias digestivas y urinarias. También es conocida 
+        por su uso tradicional para el cuidado del hígado y los riñones.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Mazatán, Chiapas.
+        </p>
+
+    
+    </main>
+
+</body>
+</html>

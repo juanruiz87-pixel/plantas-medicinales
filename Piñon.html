@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piñon - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Piñon</h2>
+
+       <img src="Plantas/Piñon.jpeg"
+     alt="Planta de piñon"
+     class="imagen-principal-piñon"
+     onclick="ampliarImagen(this)">
+<h2>Galería del Piñon</h2>
+</div>
+<h3>📸 Galería del Piñon</h3>
+
+<div class="galeria">
+    <img src="piñon/planta.jpg"
+         alt="Arbol de Piñon"
+         onclick="ampliarImagen(this)">
+
+    <img src="piñon/hojas.jpg"
+         alt="Hojas de Piñon"
+         onclick="ampliarImagen(this)">
+
+    <img src="piñon/fruto.jpg"
+         alt="Fruta de Piñon"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i>  Jatropha curcas.</i></p>
+
+        <h3>Familia</h3>
+        <p>Euphorbiaceae.</p>
+
+        <h3>Descripción</h3>
+        <p>
+            El Piñon es un arbusto o árbol pequeño de tallo ramificado que 
+            puede alcanzar varios metros de altura. Sus hojas son simples, 
+            grandes y de color verde, con forma acorazonada y varios lóbulos, 
+            margen ligeramente ondulado y pecíolo largo.
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+        El piñón se utiliza principalmente para obtener aceite de sus semillas, 
+        que puede aprovecharse para producir biodiésel y otros productos.
+         También se usa como planta ornamental y, en algunas comunidades, 
+         forma parte de prácticas de medicina tradicional. Sus semillas no deben 
+         consumirse, ya que pueden ser tóxicas.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+
+
+    </main>
+
+</body>
+</html>

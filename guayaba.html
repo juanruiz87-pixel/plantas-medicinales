@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guayaba - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Guayaba</h2>
+
+        <img src="Plantas/Guayaba.jpeg"
+     alt="Planta de Guayaba"
+     class="imagen-principa-guayaba"
+     onclick="ampliarImagen(this)">
+     
+             <h2>Galería de la guayaba</h2>
+</div>
+<h3>📸 Galería de la guayaba</h3>
+
+<div class="galeria">
+    <img src="guayaba/guayaba 2.jpeg"
+         alt="Arbol de Guayaba"
+         onclick="ampliarImagen(this)">
+
+    <img src="guayaba/hojas.jpeg"
+         alt="Hojas de guayaba"
+         onclick="ampliarImagen(this)">
+
+    <img src="guayaba/flor.jpg"
+         alt="Flores de guayaba"
+         onclick="ampliarImagen(this)">
+
+    <img src="guayaba/fruta de guayaba.jpg"
+         alt="Fruta de Guayaba"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i>Psidium guajava L.</i></p>
+
+        <h3>Familia</h3>
+        <p>Myrtaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+            La guayaba es un árbol frutal de importancia alimentaria
+            y medicinal. Puede crecer en zonas tropicales y produce
+            frutos comestibles de gran importancia para las comunidades.
+            Tiene hojas simples , de forma eliptica u ovalada . Son de color verde 
+            y con una textura un poco aspera , presenta tambien una nervadura bastante 
+            marcada y el borde es entero y la hoja es de tamaño mediano.
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            El fruto se utiliza principalmente como alimento. Sus hojas
+            también son utilizadas tradicionalmente para preparar té.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+      
+    </main>
+
+</body>
+</html>

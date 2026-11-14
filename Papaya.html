@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papaya - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Papaya</h2>
+
+       <img src="Plantas/Papaya.jpeg"
+     alt="Planta de Papaya"
+     class="imagen-principal-papaya"
+     onclick="ampliarImagen(this)">
+
+             <h2>Galería de la Papaya</h2>
+</div>
+<h3>📸 Galería de la Papaya</h3>
+
+<div class="galeria">
+    <img src="papaya/arbol.jpg"
+         alt="Arbol de Papaya"
+         onclick="ampliarImagen(this)">
+
+    <img src="papaya/hoja.jpg"
+         alt="Hojas de Papaya"
+         onclick="ampliarImagen(this)">
+
+    <img src="papaya/flores.jpg"
+         alt="Flores de papaya"
+         onclick="ampliarImagen(this)">
+
+    <img src="papaya/fruta.jpg"
+         alt="Fruta de Papaya"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i> Carica papaya L</i></p>
+
+        <h3>Familia</h3>
+        <p>Caricaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+        La papaya es una planta de tallo recto y generalmente sin ramas, 
+        con hojas grandes y palmeadas en la parte superior , Las hojas de la papaya son grandes,
+         simples y palmeadas, con varios lóbulos profundos. Son de color verde, 
+        tienen un pecíolo largo y se encuentran agrupadas en la parte superior de la planta.
+        . Su fruto es ovalado o 
+        alargado, de cáscara verde que cambia
+         a amarillo o anaranjado al madurar, con pulpa suave,
+        jugosa y dulce y numerosas semillas negras en su interior.
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            La papaya se utiliza principalmente como alimento, ya que su fruto se consume fresco,
+         en licuados, ensaladas y aguas. En la medicina tradicional, se ha utilizado para ayudar a
+          la digestión y como remedio casero para algunos malestares estomacales.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan, Chiapas.
+        </p>
+
+        
+    </main>
+
+</body>
+</html>

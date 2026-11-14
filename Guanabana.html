@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guanabana - Herbario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Herbario</h1>
+        <a href="index.html">← Regresar</a>
+    </header>
+
+    <main>
+
+        <h2>Guanabana</h2>
+
+        <img src="Plantas/Guanabana.jpeg"
+     alt="Planta de Guanabana"
+     class="imagen-principal-guanabana"
+     onclick="ampliarImagen(this)">
+<h3>📸 Galería de la Guanabana</h3>
+
+<div class="galeria">
+    <img src="guanabana/guanabana 1.jpeg"
+         alt="Arbol de Guanabana"
+         onclick="ampliarImagen(this)">
+
+    <img src="guanabana/guanabana 2.jpeg"
+         alt="Hojas de Guanabana"
+         onclick="ampliarImagen(this)">
+
+    <img src="guanabana/flor.jpg"
+         alt="Flores de Guanabana"
+         onclick="ampliarImagen(this)">
+
+    <img src="guanabana/fruta.jpg"
+         alt="Fruta de Guanabana"
+         onclick="ampliarImagen(this)">
+</div>
+
+<!-- Ventana para ver la imagen grande -->
+<div id="visor" class="visor"
+     onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" alt="">
+    <p id="descripcionImagen"></p>
+</div>
+
+<script>
+function ampliarImagen(imagen) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imagenGrande").src = imagen.src;
+    document.getElementById("descripcionImagen").textContent =
+        imagen.alt;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+</script>
+        <h3>Nombre científico</h3>
+        <p><i> Annona muricata L.</i></p>
+
+        <h3>Familia</h3>
+        <p>Annonaceae</p>
+
+        <h3>Descripción</h3>
+        <p>
+            La guanábana es un árbol de tamaño mediano, con tronco recto y
+             ramas extendidas. Sus hojas son simples, alargadas, de color verde oscuro
+              y con margen entero, mientras que su fruto es grande y de forma ovalada, 
+              con cáscara verde cubierta de pequeñas protuberancias, pulpa blanca y suave,
+               de sabor dulce y ligeramente ácido, y semillas negras en su interior.
+        </p>
+
+        <h3>Usos</h3>
+        <p>
+            La guanábana se utiliza principalmente como alimento, ya que su fruto se consume fresco, 
+            en aguas, licuados, nieves y postres. También se usa en la medicina tradicional mediante 
+            infusiones de algunas partes de la planta, aunque estos usos no sustituyen un
+             tratamiento médico.
+        </p>
+
+        <h3>📍 Lugar donde fue encontrada</h3>
+
+        <p>
+            Municipio de Huehuetan Chiapas.
+        </p>
+
+    </main>
+
+</body>
+</html>

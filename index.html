@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Herbario de la FCA</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+<!-- ENCABEZADO INSTITUCIONAL -->
+<div class="encabezado-universidad">
+
+    <!-- LOGO UNACH -->
+    <div class="logo-universidad">
+        <img
+            src="imagenes/logo de la unach.jpg"
+            alt="Facultad de Ciencias Agrícolas - UNACH"
+        >
+    </div>
+
+    <!-- TÍTULO -->
+    <div class="informacion-proyecto">
+
+        <h1>Herbario de la FCA</h1>
+
+        <p>Catálogo botánico digital</p>
+
+        <p>
+            Facultad de Ciencias Agrícolas - UNACH
+        </p>
+
+        <p>
+            Ingeniería en Agronomía
+        </p>
+
+    </div>
+
+    <!-- INTEGRANTES -->
+    <div class="integrantes">
+
+        <h3>Integrantes</h3>
+
+        <p>Juan Ángel Ruiz González</p>
+        <p>Abdi Gerardo Mendez Flores</p>
+        <p>Victor Manuel Romo Martinez</p>
+        <p>Cristian Ivanni Citalan Citalan</p>
+        <p>Angel Emir Gomez Santiago</p>
+        <p>Alexis Daniel Herrera Marroquin</p>
+
+    </div>
+
+</div>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo">
+            🌿 Herbario
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#plantas">Plantas</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+    </header>
+
+
+    <!-- PORTADA -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+            <h1>Herbario </h1>
+
+            <p>
+                Conoce las plantas medicinales y comestibles
+                presentes en el municipio de  Huehuetan , Chiapas.
+            </p>
+<!-- MAPA DE UBICACIÓN -->
+<div class="mapa-inicio">
+    <h2>Ubicación de Huehuetán y el Municipio de Mazatán, Chiapas</h2>
+    <img src="Plantas/Mapa.jpg"
+         alt="Mapa de ubicación de las plantas"
+         class="imagen-mapa"
+         onclick="abrirMapa()">
+    <p class="texto-mapa">Mapa de los lugares donde se encontraron las plantas </p>
+</div>
+<!-- VENTANA DEL MAPA GRANDE -->
+<div id="ventanaMapa" class="ventana-mapa"
+     onclick="cerrarMapa()">
+    <span class="cerrar-mapa"
+      onclick="event.stopPropagation(); cerrarMapa()">&times;</span>
+    <img src="Plantas/Mapa.jpg"
+         alt="Mapa ampliado de los lugares de recoleccion de plantas en 
+         Huehuetan y Mazatán, Chiapas"
+         id="mapaGrande">
+
+</div>
+            <a href="#plantas" class="boton">
+                Explorar plantas
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- BUSCADOR -->
+    <section class="buscador">
+
+        <h2>Buscar una planta</h2>
+
+        <input
+            type="text"
+            id="busqueda"
+            placeholder="Escribe el nombre de una planta..."
+        >
+
+    </section>
+
+
+    <!-- PLANTAS -->
+    <section id="plantas" class="plantas">
+
+        <h2>Plantas registradas</h2>
+
+        <div id="contenedor-plantas" class="grid">
+
+            <!-- Guayaba -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Guayaba.jpeg" alt="Guayaba">
+
+                <div class="contenido">
+
+                    <h3>Guayaba</h3>
+
+                    <p class="cientifico">
+                        Psidium guajava L
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>Myrtaceae
+                    </p>
+
+                    <p>
+                        Planta de uso medicinal , comestible y maderable
+                        
+                    </p>
+
+                    <a href="guayaba.html" class="boton-info">
+                         Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+    
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+
+            </article>
+
+
+            <!-- Nim -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Nim.jpeg" alt="Nim">
+
+                <div class="contenido">
+
+                    <h3>Nim</h3>
+
+                    <p class="cientifico">
+                        Azadirachta indica
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Meliaceae
+                    </p>
+
+                    <p>
+                        Árbol  de importancia leñosa y medicinal.
+                    </p>
+                      <a href="Nim.html" class="boton-info">
+                         Ver información
+                    </a>
+
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+ 
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+
+            </article>
+
+
+            <!-- Guanabana -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Guanabana.jpeg" alt="Guanabana">
+
+                <div class="contenido">
+
+                    <h3>Guanabana</h3>
+
+                    <p class="cientifico">
+                        Annona muricata
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>  Annonaceae 
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Guanabana.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+ 
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+
+            </article>
+
+
+            <!-- Mango Ataulfo -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Mango Ataulfo.jpeg" alt="Mango Ataulfo">
+
+                <div class="contenido">
+
+                    <h3>Mango Ataulfo</h3>
+
+                    <p class="cientifico">
+                         Mangifera indica
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Anacardiaceae
+                    </p>
+
+                    <p>
+                        Planta ampliamente conocida por sus usos
+                        tradicionales.
+                    </p>
+                      <a href="Mango.html" class="boton-info">
+                         ver información
+                      </a>
+                       <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+ 
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+                
+                </div>
+
+            </article>
+                            
+                          
+                           <!-- Nance -->
+                     <article class="tarjeta">
+
+                <img src="Plantas/nance.jpeg" alt="Nance">
+
+                <div class="contenido">
+
+                    <h3>Nance</h3>
+
+                    <p class="cientifico">
+                         Brysomina crassifolia
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>   Malpighiaceae
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Nance.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+  
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+                  
+</article>
+
+
+                  <!-- Buganbilia -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Buganbilia.jpeg" alt="Buganbilia">
+
+                <div class="contenido">
+
+                    <h3>Buganbilia</h3>
+
+                    <p class="cientifico">
+                         Bougainvillea
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Nyctaginaceae 
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Buganbilia.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+   
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+   
+    
+    </p>
+
+</div>
+ 
+</article>
+
+
+                  <!-- Papaya -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Papaya.jpeg" alt="papaya">
+
+                <div class="contenido">
+
+                    <h3>Papaya</h3>
+
+                    <p class="cientifico">
+                         Carica papaya L
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>  Caricaceae 
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Papaya.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+ 
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+   
+        
+    </p>
+
+</article>
+ <!-- Piñon -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Piñon.jpeg" alt="Piñon">
+
+                <div class="contenido">
+
+                    <h3>Piñon</h3>
+
+                    <p class="cientifico">
+                          Jatropha curcas.
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>  Euphorbiaceae. 
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Piñon.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+   
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+   
+        
+    </p>
+
+</article>
+ <!-- Chipilincillo -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Chipilincillo.jpg" alt="Chipilincillo">
+
+                <div class="contenido">
+
+                    <h3>Chipilincillo</h3>
+
+                    <p class="cientifico">
+                         Phyllanthus niruri 
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>  Phyllanthaceae. 
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Chipilincillo.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+   
+    <p>
+        Municipio de Mazatán, Chiapas.
+    </p>
+
+</div>
+
+             </article>
+                 <!-- Verbena Azul -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Verbena.jpeg" alt="papaya">
+
+                <div class="contenido">
+
+                    <h3>Verbena Azul</h3>
+
+                    <p class="cientifico">
+                         Verbena hastata
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>  Verbenaceae 
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Verbena.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+ 
+               </article>
+               <!-- Marañon -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Marañon.jpg" alt="Marañon">
+
+                <div class="contenido">
+
+                    <h3>Marañon</h3>
+
+                    <p class="cientifico">
+                         Anacardium occidentale 
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>  Anacardiaceae  
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Marañon.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+   
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+              </article>
+    <!-- Pan de palo -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Pan de palo.jpg" alt="Pan de palo">
+
+                <div class="contenido">
+
+                    <h3>Pan de palo</h3>
+
+                    <p class="cientifico">
+                         Artocarpus altilis 
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Moraceae  
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Pan de palo.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+
+    <p>
+        Municipio de Mazatán, Chiapas.
+    </p>
+
+</div>
+</article>
+                 <!-- Capulín Blanco -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Capulin blanco.jpg" alt="Capulín">
+
+                <div class="contenido">
+
+                    <h3>Capulin </h3>
+
+                    <p class="cientifico">
+                         Muntingia calabura.
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Muntingiaceae
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Capulín.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+ 
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+</article>
+    <!-- Agave -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Agave.jpg" alt="Agave">
+
+                <div class="contenido">
+
+                    <h3>Agave</h3>
+
+                    <p class="cientifico">
+                         Agave angustifolia
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Asparagaceae  
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Agave.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+ 
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+        </article>
+    <!-- Chico zapote -->
+            <article class="tarjeta">
+
+                <img src="Plantas/chico zapote.jpg" alt="chico zapote">
+
+                <div class="contenido">
+
+                    <h3>Chico zapote</h3>
+
+                    <p class="cientifico">
+                          Manilkara zapota 
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>Sapotaceae 
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Chico zapote.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+</article>
+    <!-- Tamarindo -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Tamarindo.jpg" alt="Tamarindo">
+
+                <div class="contenido">
+
+                    <h3>Tamarindo</h3>
+
+                    <p class="cientifico">
+                         Tamarindus indica
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong>  Fabaceae  
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Tamarindo.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+    
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+</article>
+    <!-- Maguey morado -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Maguey morado.jpg" alt="Maguey morado">
+
+                <div class="contenido">
+
+                    <h3>Maguey morado</h3>
+
+                    <p class="cientifico">
+                         Tradescantia spathacea
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Commelinaceae   
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Maguey morado.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+    
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+</article>
+    <!-- Espada del rey -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Espada del rey.jpg" alt="Pan de palo">
+
+                <div class="contenido">
+
+                    <h3>Espada del rey</h3>
+
+                    <p class="cientifico">
+                         Dracaena trifasciata 
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Asparagaceae   
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Espada del rey.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+ 
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+</article>
+    <!-- Almendro -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Almendro.jpg" alt="Almendro">
+
+                <div class="contenido">
+
+                    <h3>Almendro</h3>
+
+                    <p class="cientifico">
+                         Prunus amygdalus  
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Rosaceae  
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Almendro.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+   
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+</article>
+    <!-- Limón -->
+            <article class="tarjeta">
+
+                <img src="Plantas/limón.jpg" alt="limón">
+
+                <div class="contenido">
+
+                    <h3>Limon</h3>
+
+                    <p class="cientifico">
+                         Citrus × limon
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Rutaceae 
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Limon.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+    
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+
+</div>
+</article>
+    <!-- Epazote -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Epazote.jpg" alt="Epazote">
+
+                <div class="contenido">
+
+                    <h3>Epazote</h3>
+
+                    <p class="cientifico">
+                         Dysphania ambrosioides  
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Amaranthaceae
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Epazote.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+
+  
+
+    <p>
+        Municipio de Mazatán, Chiapas.
+    </p>
+
+</div>
+    </p>
+
+</article>
+ <!-- Mamey -->
+            <article class="tarjeta">
+
+                <img src="Plantas/mamey.jpg" alt="papaya">
+
+                <div class="contenido">
+
+                    <h3>Mamey </h3>
+
+                    <p class="cientifico">
+                         Pouteria sapota.
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Sapotaceae
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Mamey.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+    
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+</article>
+ <!-- Hierba mora -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Yerba mora.jpg" alt="papaya">
+
+                <div class="contenido">
+
+                    <h3>Hierba mora </h3>
+
+                    <p class="cientifico">
+                         Solanum nigrum.
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Solanaceae
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="Hierba mora.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+   
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+</article>
+<!-- Cacao -->
+            <article class="tarjeta">
+
+                <img src="Plantas/cacao.jpg" alt="Cacao">
+
+                <div class="contenido">
+
+                    <h3>Cacao</h3>
+
+                    <p class="cientifico">
+                         Theobroma cacao L..
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Malvaceae
+                    </p>
+
+                    <p>
+                        Planta tropical cultivada por sus frutos.
+                    </p>
+                      <a href="cacao.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+
+
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+</article>
+<!-- Canela -->
+            <article class="tarjeta">
+
+                <img src="Plantas/Canela.jpg" alt="Canela">
+
+                <div class="contenido">
+
+                    <h3>Canela</h3>
+
+                    <p class="cientifico">
+                         Cinnamomum verum
+                    </p>
+
+                    <p>
+                        <strong>Familia:</strong> Lauraceae
+                    </p>
+
+                    <p>
+                        Planta tropical que se ocupa la corteza del arbol.
+                    </p>
+                      <a href="Canela.html" class="boton-info">
+                            Ver información
+                    </a>
+                <div class="ubicacion-planta">
+
+    <h4>📍 Lugar donde fue encontrada</h4>
+    
+    <p>
+        Municipio de Huehuetan, Chiapas.
+    </p>
+</article>
+
+
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+
+        <h2>Sobre este proyecto</h2>
+
+        <p>
+            Esta página tiene como objetivo recopilar información
+            sobre las plantas medicinales y comestibles encontradas
+            en el municipio de Huehuetan  , Chiapas.
+        </p>
+    
+
+    </section>
+
+
+    <!-- VENTANA DE INFORMACIÓN -->
+    <div id="modal" class="modal">
+
+        <div class="modal-contenido">
+
+            <span class="cerrar" onclick="cerrarInfo()">
+                &times;
+            </span>
+
+            <h2 id="titulo-modal"></h2>
+
+            <p id="texto-modal"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 Herbario FCA
+        </p>
+
+        <p>
+            Proyecto de botanica sistematica 
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
